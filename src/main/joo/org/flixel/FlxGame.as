@@ -16,6 +16,7 @@ package org.flixel
 	import flash.utils.getTimer;
 	
 	import org.flixel.data.FlxConsole;
+	import org.flixel.data.FlxMouse;
 	import org.flixel.data.FlxPause;
 
 	/**
@@ -432,16 +433,17 @@ package org.flixel
 			FlxG.log(vstring);
 			FlxG.log(underline);
 			
+			var flxMouse:FlxMouse = FlxG.mouse;
 			//Add basic input even listeners
-			stage.addEventListener(MouseEvent.MOUSE_DOWN, FlxG.mouse.handleMouseDown);
-			stage.addEventListener(MouseEvent.MOUSE_UP, FlxG.mouse.handleMouseUp);
+			stage.addEventListener(MouseEvent.MOUSE_DOWN, flxMouse.handleMouseDown);
+			stage.addEventListener(MouseEvent.MOUSE_UP, flxMouse.handleMouseUp);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
 			stage.addEventListener(KeyboardEvent.KEY_UP, onKeyUp);
 			if(!FlxG.mobile)
 			{
-				stage.addEventListener(MouseEvent.MOUSE_OUT, FlxG.mouse.handleMouseOut);
-				stage.addEventListener(MouseEvent.MOUSE_OVER, FlxG.mouse.handleMouseOver);
-				stage.addEventListener(MouseEvent.MOUSE_WHEEL, FlxG.mouse.handleMouseWheel);
+				stage.addEventListener(MouseEvent.MOUSE_OUT, flxMouse.handleMouseOut);
+				stage.addEventListener(MouseEvent.MOUSE_OVER, flxMouse.handleMouseOver);
+				stage.addEventListener(MouseEvent.MOUSE_WHEEL, flxMouse.handleMouseWheel);
 				stage.addEventListener(Event.DEACTIVATE, onFocusLost);
 				stage.addEventListener(Event.ACTIVATE, onFocus);
 				
