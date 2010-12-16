@@ -31,7 +31,7 @@ package org.flixel
 		// So if you are using the Flex 3.x SDK compiler, switch the embed statment below to expose the correct version.
 		
 		//Flex v4.x SDK only (see note above):
-		[Embed(source="data/nokiafc22.ttf",fontFamily="system",embedAsCFF="false")] protected var junk:String;
+		[Embed(source="data/nokiafc22.ttf",fontName="system",embedAsCFF="false")] protected var junk:String;
 		
 		//Flex v3.x SDK only (see note above):
 		//[Embed(source="data/nokiafc22.ttf",fontFamily="system")] protected var junk:String;
