@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flixel</artifactId>
   <groupId>net.jangaroo.flash.examples</groupId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.8.0-SNAPSHOT</version>
 
   <packaging>jangaroo</packaging>
 
@@ -75,13 +75,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jangaroo_version>0.7.13-SNAPSHOT</jangaroo_version>
-    <jangaroo_libs_version>0.7.14-SNAPSHOT</jangaroo_libs_version>
+    <jangaroo_version>0.8.1</jangaroo_version>
+    <jangaroo_libs_version>0.8.2</jangaroo_libs_version>
   </properties>
 
   <build>
     <sourceDirectory>src/main/joo</sourceDirectory>
-    <outputDirectory>target/joo</outputDirectory>
 
     <resources>
       <resource>
@@ -92,7 +91,7 @@
           <include>**/*.ogg</include>
           <include>**/*.ttf</include>
         </includes>
-        <targetPath>scripts/classes/</targetPath>
+        <targetPath>joo/classes/</targetPath>
       </resource>
     </resources>
 
@@ -100,7 +99,7 @@
       <!-- Register the packaging type "jangaroo". -->
       <plugin>
         <groupId>net.jangaroo</groupId>
-        <artifactId>jangaroo-lifecycle</artifactId>
+        <artifactId>jangaroo-maven-plugin</artifactId>
         <version>${jangaroo_version}</version>
         <extensions>true</extensions>
       </plugin>
