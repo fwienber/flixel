@@ -412,6 +412,7 @@ package org.flixel
 			_alpha = Alpha;
 			if((_alpha != 1) || (_color != 0x00ffffff)) _ct = new ColorTransform((_color>>16)*0.00392,(_color>>8&0xff)*0.00392,(_color&0xff)*0.00392,_alpha);
 			else _ct = null;
+			_colorTransformedPixels = null;
 			calcFrame();
 		}
 		
@@ -435,6 +436,7 @@ package org.flixel
 			_color = Color;
 			if((_alpha != 1) || (_color != 0x00ffffff)) _ct = new ColorTransform((_color>>16)*0.00392,(_color>>8&0xff)*0.00392,(_color&0xff)*0.00392,_alpha);
 			else _ct = null;
+			_colorTransformedPixels = null;
 			calcFrame();
 		}
 		
