@@ -146,7 +146,7 @@ package org.flixel
 					s = new FlxSprite();
 				if(Multiple)
 				{
-					r = FlxU.random()*tf;
+					r = uint(FlxU.random()*tf);
 					if(BakedRotations > 0)
 						s.loadRotatedGraphic(Graphics,BakedRotations,r);
 					else

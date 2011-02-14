@@ -37,8 +37,8 @@ package org.flixel
 			
 			//First create a tile brush
 			var s:FlxSprite = new FlxSprite().loadGraphic(TileGraphic,true,false,TileWidth,TileHeight);
-			var sw:uint = s.width;
-			var sh:uint = s.height;
+			var sw:uint = uint(s.width);
+			var sh:uint = uint(s.height);
 			var total:uint = s.frames + Empties;
 			
 			//Then prep the "canvas" as it were (just doublechecking that the size is on tile boundaries)
@@ -63,8 +63,8 @@ package org.flixel
 			var c:uint;
 			var ox:uint;
 			var oy:uint = 0;
-			var widthInTiles:uint = width/sw;
-			var heightInTiles:uint = height/sh;
+			var widthInTiles:uint = uint(width/sw);
+			var heightInTiles:uint = uint(height/sh);
 			while(r < heightInTiles)
 			{
 				ox = 0;
