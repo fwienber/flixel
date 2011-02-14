@@ -209,7 +209,7 @@ package org.flixel
 		public function loadRotatedGraphic(Graphic:Class, Rotations:uint=16, Frame:int=-1, AntiAliasing:Boolean=false, AutoBuffer:Boolean=false):FlxSprite
 		{
 			//Create the brush and canvas
-			var rows:uint = Math.sqrt(Rotations);
+			var rows:uint = uint(Math.sqrt(Rotations));
 			var brush:BitmapData = FlxG.addBitmap(Graphic);
 			if(Frame >= 0)
 			{
@@ -235,13 +235,13 @@ package org.flixel
 			if(brush.height > max)
 				max = brush.height;
 			if(AutoBuffer)
-				max *= 1.5;
+				max = uint(max * 1.5);
 			var cols:uint = FlxU.ceil(Rotations/rows);
 			width = max*cols;
 			height = max*rows;
 			var key:String = String(Graphic) + ":" + Frame + ":" + width + "x" + height;
 			var skipGen:Boolean = FlxG.checkBitmapCache(key);
-			_pixels = FlxG.createBitmap(width, height, 0, true, key);
+			_pixels = FlxG.createBitmap(uint(width), uint(height), 0, true, key);
 			_colorTransformedPixels = null;
 			width = frameWidth = _pixels.width;
 			height = frameHeight = _pixels.height;
@@ -528,7 +528,7 @@ package org.flixel
 				var ta:int = angle%360;
 				if(ta < 0)
 					ta += 360;
-				_caf = ta/_bakedRotation;
+				_caf = uint(ta/_bakedRotation);
 				if(oc != _caf)
 					calcFrame();
 				return;
@@ -688,7 +688,7 @@ package org.flixel
 		public function randomFrame():void
 		{
 			_curAnim = null;
-			_caf = int(FlxU.random()*(_pixels.width/frameWidth));
+			_caf = uint(FlxU.random()*(_pixels.width/frameWidth));
 			calcFrame();
 		}
 		
@@ -733,7 +733,7 @@ package org.flixel
 		protected function calcFrame():void
 		{
 			_boundsVisible = false;
-			var rx:uint = _caf*frameWidth;
+			var rx:uint = uint(_caf*frameWidth);
 			var ry:uint = 0;
 
 			//Handle sprite sheets
