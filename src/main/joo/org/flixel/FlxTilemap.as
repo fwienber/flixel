@@ -439,7 +439,7 @@ package org.flixel
 				while(c < iw)
 				{
 					if(c >= widthInTiles) break;
-					dd = _data[d+c] as uint;
+					dd = _data[d+c];
 					if(dd >= collideIndex)
 						blocks.push({x:x+(ix+c)*_tileWidth,y:y+(iy+r)*_tileHeight,data:dd});
 					c++;
@@ -529,7 +529,7 @@ package org.flixel
 				c = ix;
 				while(c < iw)
 				{
-					if((_data[rs+c] as uint) >= collideIndex)
+					if((_data[rs+c]) >= collideIndex)
 						colOffsets[col++] = new FlxPoint(x+c*_tileWidth, y+r*_tileHeight);
 					c++;
 				}
@@ -562,7 +562,7 @@ package org.flixel
 		 */
 		public function getTileByIndex(Index:uint):uint
 		{
-			return _data[Index] as uint;
+			return _data[Index];
 		}
 		
 		/**
@@ -702,7 +702,7 @@ package org.flixel
 				
 				tx = curX/_tileWidth;
 				ty = curY/_tileHeight;
-				if((_data[ty*widthInTiles+tx] as uint) >= collideIndex)
+				if((_data[ty*widthInTiles+tx]) >= collideIndex)
 				{
 					//Some basic helper stuff
 					tx *= _tileWidth;

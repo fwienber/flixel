@@ -131,7 +131,7 @@ package org.flixel
 				}
 			}
 			else
-				_min = (width + height)/(2*divisions);
+				_min = uint((width + height)/(2*divisions));
 			_canSubdivide = (width > _min) || (height > _min);
 			
 			//Set up comparison/sort helpers
