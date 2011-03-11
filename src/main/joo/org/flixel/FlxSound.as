@@ -150,7 +150,7 @@ package org.flixel
 		/**
 		 * Call this function to play the sound.
 		 */
-		public function play():void
+		public function play(Skip:Number=0):void  // Added SKip parameter, time in ms to skip ahead
 		{
 			if(_position < 0)
 				return;
@@ -159,7 +159,7 @@ package org.flixel
 				if(_position == 0)
 				{
 					if(_channel == null)
-						_channel = _sound.play(0,9999,_transform);
+						_channel = _sound.play(Skip,9999,_transform);  // Use Skip here
 					if(_channel == null)
 						active = false;
 				}
@@ -178,7 +178,7 @@ package org.flixel
 				{
 					if(_channel == null)
 					{
-						_channel = _sound.play(0,0,_transform);
+						_channel = _sound.play(Skip,0,_transform);  // Use Skip here, too
 						if(_channel == null)
 							active = false;
 						else

@@ -291,10 +291,11 @@ package org.flixel
 		 * @param	EmbeddedSound	The sound you want to play.
 		 * @param	Volume			How loud to play it (0 to 1).
 		 * @param	Looped			Whether or not to loop this sound.
+		 * @param   Skip			How far, in ms, from the beginning of the file to start playing
 		 * 
 		 * @return	A <code>FlxSound</code> object.
 		 */
-		static public function play(EmbeddedSound:Class,Volume:Number=1.0,Looped:Boolean=false):FlxSound
+		static public function play(EmbeddedSound:Class,Volume:Number=1.0,Looped:Boolean=false,Skip:Number=0):FlxSound //added Skip parameter
 		{
 			var i:uint = 0;
 			var sl:uint = sounds.length;
@@ -309,7 +310,7 @@ package org.flixel
 			var s:FlxSound = sounds[i];
 			s.loadEmbedded(EmbeddedSound,Looped);
 			s.volume = Volume;
-			s.play();
+			s.play(Skip);  // Send the Skip parameter on to FlxSound
 			return s;
 		}
 		
