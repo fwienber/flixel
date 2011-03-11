@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flixel</artifactId>
   <groupId>net.jangaroo.flash.examples</groupId>
-  <version>0.8.0-SNAPSHOT</version>
+  <version>0.8.5-SNAPSHOT</version>
 
   <packaging>jangaroo</packaging>
 
@@ -75,8 +75,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jangaroo_version>0.8.1</jangaroo_version>
-    <jangaroo_libs_version>0.8.3-SNAPSHOT</jangaroo_libs_version>
+    <jangaroo_version>0.8.3</jangaroo_version>
+    <jangaroo_libs_version>0.8.5</jangaroo_libs_version>
   </properties>
 
   <build>
