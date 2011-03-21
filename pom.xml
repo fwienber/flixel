@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flixel</artifactId>
   <groupId>net.jangaroo.flash.flixel</groupId>
-  <version>0.8.5.1-SNAPSHOT</version>
+  <version>0.8.5.1</version>
 
   <packaging>jangaroo</packaging>
 
