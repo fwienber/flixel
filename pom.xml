@@ -2,43 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flixel</artifactId>
-  <groupId>net.jangaroo.flash.examples</groupId>
-  <version>0.8.5-SNAPSHOT</version>
+  <groupId>net.jangaroo.flash.flixel</groupId>
+  <version>0.8.5.1-SNAPSHOT</version>
 
   <packaging>jangaroo</packaging>
 
   <name>Flixel</name>
   <description>
-    Flixel AS3 2D Game Engine 2.36 Beta
+    Flixel AS3 2D Game Engine 2.36 Beta, compiled with Jangaroo 0.8.3, using Jangaroo libraries 0.8.5.
   </description>
 
-  <repositories>
-    <repository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
+  <scm>
+    <connection>scm:git:git://github.com/fwienber/flixel.git</connection>
+    <developerConnection>scm:git:git@github.com:fwienber/flixel.git</developerConnection>
+    <url>https://github.com/fwienber/flixel</url>
+  </scm>
 
   <distributionManagement>
     <downloadUrl>http://repo.jangaroo.net/maven2</downloadUrl>
@@ -104,6 +82,21 @@
         <extensions>true</extensions>
       </plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4.3</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+      </plugin>
     </plugins>
 
     <extensions>
