@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>flixel</artifactId>
+  <groupId>net.jangaroo.flash.flixel</groupId>
+  <version>0.8.5.2-SNAPSHOT</version>
+
+  <packaging>jangaroo</packaging>
+
+  <name>Flixel</name>
+  <description>
+    Flixel AS3 2D Game Engine 2.36 Beta, compiled with Jangaroo 0.8.3, using Jangaroo libraries 0.8.5.
+  </description>
+
+  <scm>
+    <connection>scm:git:git://github.com/fwienber/flixel.git</connection>
+    <developerConnection>scm:git:git@github.com:fwienber/flixel.git</developerConnection>
+    <url>https://github.com/fwienber/flixel</url>
+  </scm>
+
+  <distributionManagement>
+    <downloadUrl>http://repo.jangaroo.net/maven2</downloadUrl>
+    <repository>
+      <id>jangaroo</id>
+      <name>Jangaroo repository</name>
+      <url>scp://repo.jangaroo.net/home/jangaroo/maven2/repo</url>
+    </repository>
+    <snapshotRepository>
+      <id>jangaroo-snapshots</id>
+      <url>scp://repo.jangaroo.net/home/jangaroo/maven2/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <developers>
+    <developer>
+      <name>Adam 'Atomic' Saltsman</name>
+      <organization>flixel.org</organization>
+      <organizationUrl>http://www.flixel.org</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <name>Frank Wienberg</name>
+      <organization>Jangaroo</organization>
+      <organizationUrl>http://www.jangaroo.net</organizationUrl>
+      <roles>
+        <role>jangarooificator</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jangaroo_version>0.8.3</jangaroo_version>
+    <jangaroo_libs_version>0.8.5</jangaroo_libs_version>
+  </properties>
+
+  <build>
+    <sourceDirectory>src/main/joo</sourceDirectory>
+
+    <resources>
+      <resource>
+        <directory>src/main/joo</directory>
+        <includes>
+          <include>**/*.png</include>
+          <include>**/*.mp3</include>
+          <include>**/*.ogg</include>
+          <include>**/*.ttf</include>
+        </includes>
+        <targetPath>joo/classes/</targetPath>
+      </resource>
+    </resources>
+
+    <plugins>
+      <!-- Register the packaging type "jangaroo". -->
+      <plugin>
+        <groupId>net.jangaroo</groupId>
+        <artifactId>jangaroo-maven-plugin</artifactId>
+        <version>${jangaroo_version}</version>
+        <extensions>true</extensions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.1</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.4.3</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+      </plugin>
+    </plugins>
+
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>1.0-beta-6</version>
+      </extension>
+    </extensions>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.jangaroo</groupId>
+      <artifactId>jooflash</artifactId>
+      <version>${jangaroo_libs_version}</version>
+      <type>jangaroo</type>
+    </dependency>
+  </dependencies>
+
+</project>

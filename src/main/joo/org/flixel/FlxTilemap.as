@@ -801,7 +801,7 @@ package org.flixel
 				var basic:FlxBasic;
 				var i:uint = 0;
 				var members:Array = (ObjectOrGroup as FlxGroup).members;
-				while(i < length)
+				while(i < members.length)
 				{
 					basic = members[i++] as FlxBasic;
 					if(basic is FlxObject)
@@ -843,7 +843,7 @@ package org.flixel
 				var basic:FlxBasic;
 				var i:uint = 0;
 				var members:Array = (ObjectOrGroup as FlxGroup).members;
-				while(i < length)
+				while(i < members.length)
 				{
 					basic = members[i++] as FlxBasic;
 					if(basic is FlxObject)

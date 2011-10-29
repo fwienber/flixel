@@ -687,7 +687,7 @@ package org.flixel
 				var results:Boolean = false;
 				var i:uint = 0;
 				var members:Array = (ObjectOrGroup as FlxGroup).members;
-				while(i < length)
+				while(i < members.length)
 				{
 					if(overlaps(members[i++],InScreenSpace,Camera))
 						results = true;
@@ -738,7 +738,7 @@ package org.flixel
 				var basic:FlxBasic;
 				var i:uint = 0;
 				var members:Array = (ObjectOrGroup as FlxGroup).members;
-				while(i < length)
+				while(i < members.length)
 				{
 					if(overlapsAt(X,Y,members[i++],InScreenSpace,Camera))
 						results = true;
