@@ -210,10 +210,10 @@ package org.flixel.data
 		 */
 		protected function printTimingData():String
 		{
-			var up:uint = mtrUpdate.average();
-			var rn:uint = mtrRender.average();
+			var up:uint = uint(mtrUpdate.average());
+			var rn:uint = uint(mtrRender.average());
 			var fx:uint = up+rn;
-			var tt:uint = mtrTotal.average();
+			var tt:uint = uint(mtrTotal.average());
 			return up + "ms update\n" + rn + "ms render\n" + fx + "ms flixel\n" + (tt-fx) + "ms flash\n" + tt + "ms total";
 		}
 	}
