@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flixel</artifactId>
   <groupId>net.jangaroo.flash.flixel</groupId>
-  <version>0.8.5.2-SNAPSHOT</version>
+  <version>1.0.0-1-SNAPSHOT</version>
 
   <packaging>jangaroo</packaging>
 
   <name>Flixel</name>
   <description>
-    Flixel AS3 2D Game Engine 2.36 Beta, compiled with Jangaroo 0.8.3, using Jangaroo libraries 0.8.5.
+    Flixel AS3 2D Game Engine 2.36 Beta, compiled with Jangaroo 1.0.0, using Jangaroo libraries 1.0.0.
   </description>
 
   <scm>
@@ -53,8 +53,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jangaroo_version>0.8.3</jangaroo_version>
-    <jangaroo_libs_version>0.8.5</jangaroo_libs_version>
+    <jangaroo_version>1.0.0</jangaroo_version>
+    <jangaroo_libs_version>1.0.0</jangaroo_libs_version>
   </properties>
 
   <build>
